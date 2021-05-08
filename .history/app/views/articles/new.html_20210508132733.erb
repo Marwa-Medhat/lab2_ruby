@@ -1,0 +1,21 @@
+<h1>Articles <%= @name %></h1>
+
+<h1>New Article</h1>
+
+<%# model: @article  %>
+<%# scope: article , url : articles_path, local : true %>
+<%= form_with   do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title , class : "aa"%>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body  %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
